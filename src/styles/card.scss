@@ -1,0 +1,73 @@
+
+
+.sig-card {
+    border-radius: 1rem;
+    width: calc((100% / 3) - 2rem);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -40px;
+    background: linear-gradient(140deg, $plain-white, $greyish-white);
+    padding: 3rem;
+    color: $blue-black;
+
+    &__level {
+        font-weight: bold;
+        font-family: 'MenloBold';
+        font-size: 1.5rem;
+        margin: 0 0 0.5rem 0;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-family: 'Futura';
+        font-size: 3.6rem;
+        margin: 0;
+    }
+
+    &__label {
+        display: block;
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        font-family: 'Futura';
+        opacity: 0.6;
+    }
+
+    &__bullit {
+        padding: 0.6rem 0;
+        display: flex;
+        font-family: 'Futura';
+        font-weight: 500;
+        font-size: 1.4rem;   
+        
+        p {
+            padding-top: 0.2rem;
+            padding-left: 1.2rem;
+        }
+    }
+
+    &__bullit-container {
+        margin-top: 3rem; 
+    }
+
+    &__checkmark {
+        border: 1px solid $confirm-green;
+        border-radius: 50rem;
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &--no-benefit {
+            opacity: 0.35;
+        }
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        font-weight: bold;
+        font-family: 'Menlo';
+        margin: 2.5rem 0 1rem 0;
+        text-align: center;
+    }
+}

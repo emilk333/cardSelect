@@ -1,0 +1,21 @@
+
+$blue-black : #152C5B;
+$confirm-green : #58E2AC;
+$plain-white : #FFFFFF;
+$greyish-white : #F2F2F2;
+$plain-grey : #EAEAEA;
+
+$blue-gradient-top : #44C5FF;
+$blue-gradient-top : #126FFE;
+
+$purple-gradient-top : #7B90FB;
+$purple-gradient-top : #445DE5;
+
+$red-gradient-top : #FF7A67;
+$red-gradient-top : #F83C61;
+
+.sig-text-gradient {
+    background: -webkit-linear-gradient(124deg, #eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

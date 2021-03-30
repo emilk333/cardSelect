@@ -1,0 +1,41 @@
+
+.sig-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 128rem;
+    width: 100%;
+    margin: 0 auto;
+
+    &__logo {
+        height: auto;
+        width: 13rem;
+    }
+
+    &__nav-item-container {
+        display: flex;
+    }
+
+    &__nav-item {
+        font-family: 'Futura';
+        font-size: 1.4rem;
+        margin: 0 5rem;
+        font-weight: bold;
+
+        a {
+            display: flex;
+            color: $blue-black;
+            text-decoration: none;
+
+            .sig-general__chevron-left {
+                margin-top: 0.3rem;
+                margin-left: 1.5rem;
+            }
+        }
+    }
+}

@@ -1,7 +1,6 @@
 const Path = require('path');
 const Webpack = require('webpack');
 const { merge } = require('webpack-merge');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
@@ -10,18 +9,23 @@ module.exports = merge(common, {
   devtool: 'eval-cheap-source-map',
   output: {
     chunkFilename: 'js/[name].chunk.js',
+    publicPath: '/',
   },
   devServer: {
-    inline: true,
+    clientLogLevel: 'warning',
+    historyApiFallback: true,
     hot: true,
+    publicPath: "/",
+    inline: true,
+    overlay: true,
+    contentBase: 'dist',
+    host: 'localhost',
+    port: 8080
   },
   plugins: [
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
-    }),
-    new StylelintPlugin({
-      files: Path.join('src', '**/*.s?(a|c)ss'),
-    }),
+    })
   ],
   module: {
     rules: [

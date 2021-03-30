@@ -1,0 +1,69 @@
+
+
+.sig-options {
+    margin: 8rem 0;
+    
+    &__label {
+        font-size: 1.4rem;
+        color: $blue-black;
+        font-family: 'Futura';
+        font-weight: 500;
+    }
+
+    &__button {
+        font-size: 1.4rem;
+        color: $plain-white;
+        font-family: 'Futura';
+        border: 1px solid red; //change 
+        background-color: $plain-white; 
+        border-radius: 0.5rem;
+        height: 4rem;  
+        cursor: pointer;
+    }
+
+    &__button-container {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;   
+    }
+
+    &__slider-button {
+        position: relative;
+        width: 30rem;
+    }
+
+    &__slider-front {
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 0.4rem;
+        height: 100%;
+        width: 50%;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__to-payment {
+        min-width: 18rem;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        right: 4rem;
+    }
+
+    &__to-payment-icon {
+        height: auto;
+        width: 2.5rem;
+        margin-right: 1.5rem;
+    }
+
+    &__to-payment-chevron {
+        position: absolute;
+        right: -4rem;
+    }
+    
+}
