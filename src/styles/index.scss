@@ -1,13 +1,17 @@
 
 //foundation
 @import './normalize.scss';
-@import './theme.scss';
+@import './variables.scss';
 @import './fonts.scss';
 
 //components 
 @import './options.scss';
 @import './card.scss';
 @import './navigation.scss';
+
+// theme
+@import './theme.scss'; //remove ?
+
 
 html { 
 	font-size: 10px; 

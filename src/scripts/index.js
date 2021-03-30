@@ -4,16 +4,27 @@ if (process.env.NODE_ENV === 'development') {
 	require('../index.html');
 }
 
+function applyThemeAccordingToCardTarget(event, cardElements) {
+	const classToApply = 'sig-card--active'
+	const elemToApplyClass = event.currentTarget
+	cardElements.forEach(card => card.classList.remove(classToApply))
+	elemToApplyClass.classList.add(classToApply)
+	
+	//Also write some code which allows for ONE scss var to change, which then transforms
+	//everywhere 
+}
+
+function handleClick(event, cardElements) {
+	applyThemeAccordingToCardTarget(event, cardElements)
+}
+
 
 function run() {
-	
-	function handleClick() {
-		console.log("123")
-	}
+	const cardElements = document.querySelectorAll(".sig-card")
 
-	const cardElement = document.querySelectorAll(".sig-card")
-
-	cardElement.forEach(card => card.addEventListener('click', handleClick));
+	cardElements.forEach(card => card.addEventListener('click', function(e) {
+		handleClick(e, cardElements)
+	}));
 }
 
 

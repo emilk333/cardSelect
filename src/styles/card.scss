@@ -1,12 +1,68 @@
 
+.sig-card-basic, .sig-card-team, .sig-card-tribe {
+    position: relative;
+    border-radius: 1rem;
+    padding: 3.5rem;
+    background: linear-gradient(140deg, $plain-white, $greyish-white);
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -40px;
+}
+
+.sig-card-basic {
+    .sig-card__title {
+        background: -webkit-linear-gradient(124deg, $blue-gradient-bottom, $blue-gradient-top);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.sig-card-team {
+    .sig-card__title {
+        background: -webkit-linear-gradient(124deg, $purple-gradient-bottom, $purple-gradient-top);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.sig-card-tribe {
+    .sig-card__title {
+        background: -webkit-linear-gradient(124deg, $red-gradient-bottom, $red-gradient-top);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
 
 .sig-card {
-    border-radius: 1rem;
     width: calc((100% / 3) - 2rem);
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -40px;
-    background: linear-gradient(140deg, $plain-white, $greyish-white);
-    padding: 3rem;
     color: $blue-black;
+    cursor: pointer;
+
+    &--active {
+
+        .sig-card__checkmark--filled {
+            opacity: 1;
+        }
+
+        .sig-card-basic {
+            background: linear-gradient(140deg, $blue-gradient-top, $blue-gradient-bottom);
+            box-shadow: rgba($blue-gradient-top, 0.1) 0px 1px 1px 0px inset, rgba($blue-gradient-bottom, 0.25) 0px 10px 100px -20px, rgba($blue-gradient-bottom, 0.35) 0px 30px 60px 0px;
+        }
+
+        .sig-card-team {
+            background: linear-gradient(140deg, $purple-gradient-top, $purple-gradient-bottom);
+            box-shadow: rgba($purple-gradient-top, 0.1) 0px 1px 1px 0px inset, rgba($purple-gradient-bottom, 0.25) 0px 10px 100px -20px, rgba($purple-gradient-bottom, 0.35) 0px 30px 60px 0px;
+        }
+
+        .sig-card-tribe {
+            background: linear-gradient(140deg, $red-gradient-top, $red-gradient-bottom);
+            box-shadow: rgba($red-gradient-top, 0.1) 0px 1px 1px 0px inset, rgba($red-gradient-bottom, 0.25) 0px 10px 100px -20px, rgba($red-gradient-bottom, 0.35) 0px 30px 60px 0;
+        }
+
+        .sig-card__title {
+            background: -webkit-linear-gradient(124deg, $plain-white, $greyish-white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 
     &__level {
         font-weight: bold;
@@ -37,6 +93,10 @@
         font-family: 'Futura';
         font-weight: 500;
         font-size: 1.4rem;   
+
+        &--no-benefit {
+            opacity: 0.35;
+        }
         
         p {
             padding-top: 0.2rem;
@@ -58,8 +118,25 @@
         align-items: center;
         justify-content: center;
 
-        &--no-benefit {
-            opacity: 0.35;
+        svg {
+            fill: $confirm-green;
+        }
+
+        &--filled {
+            transition: opacity 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            height: 2.2rem;
+            width: 2.2rem;
+            background-color: $confirm-green;
+            position: absolute;
+            bottom: -1.1rem;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%);
+
+            svg {
+                fill: $plain-white;
+            }
         }
     }
 
@@ -67,7 +144,15 @@
         font-size: 2.2rem;
         font-weight: bold;
         font-family: 'Menlo';
-        margin: 2.5rem 0 1rem 0;
+        margin: 2.5rem 0 0.5rem 0;
         text-align: center;
+    }
+
+    &__price-label {
+        font-size: 1.2rem;
+        font-family: 'Futura';
+        font-weight: 500;
+        opacity: 0.5;
+        margin-left: -0.7rem;
     }
 }
