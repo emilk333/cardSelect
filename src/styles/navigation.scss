@@ -16,6 +16,10 @@
         height: auto;
         width: 13rem;
 
+        @media screen and (max-width: '800px') {
+            padding-left: 2rem;
+        }
+
         svg {
             fill : $blue-black;
         }
@@ -23,6 +27,10 @@
 
     &__nav-item-container {
         display: flex;
+
+        @media screen and (max-width: '800px') {
+            display: none;
+        }
     }
 
     &__nav-item {

@@ -2,6 +2,20 @@
 
 .sig-options {
     margin: 8rem 0;
+
+    @media screen and (max-width: '800px') {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: '450px') {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: unset;
+    }
     
     &__label {
         font-size: 1.4rem;
@@ -24,7 +38,11 @@
     &__button-container {
         margin-top: 1rem;
         display: flex;
-        justify-content: space-between;   
+        justify-content: space-between;  
+        
+        @media screen and (max-width: '800px') {
+            flex-direction: column;
+        }
     }
 
     &__slider-button {
@@ -36,6 +54,10 @@
                 right: 0;
                 left: auto
             }
+        }
+
+        @media screen and (max-width: '450px') {
+            width: 100%;
         }
     }
 
@@ -77,6 +99,18 @@
         justify-content: center;
         position: relative;
         right: 4rem;
+        
+        @media screen and (max-width: '800px') {
+            margin-top: 3rem;
+            right: 0;
+            width: 10rem;
+        }   
+        
+        @media screen and (max-width: '500px') {
+            margin-top: 3rem;
+            right: 0;
+            width: calc(100% - 6rem);
+        }   
     }
 
     &__to-payment-icon {

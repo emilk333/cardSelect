@@ -31,9 +31,14 @@
 }
 
 .sig-card {
-    width: calc((100% / 3) - 2rem);
+    width: calc((100% / 3) - 4rem);
+    min-width: 28rem;
     color: $blue-black;
     cursor: pointer;
+
+    @media screen and (max-width: '500px') {
+        width: 100%;
+    }
 
     &--active {
 

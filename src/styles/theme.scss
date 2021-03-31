@@ -13,8 +13,10 @@
         background: -webkit-linear-gradient(124deg, $blue-gradient-top, $blue-gradient-bottom);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
 
-        & svg {
+    .sig-general__chevron-left {
+        svg {
             fill : $blue-gradient-bottom
         }
     }
@@ -49,8 +51,10 @@
         background: -webkit-linear-gradient(124deg, $purple-gradient-top, $purple-gradient-bottom);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
 
-        & svg {
+    .sig-general__chevron-left {
+        svg {
             fill : $purple-gradient-bottom
         }
     }
@@ -85,8 +89,10 @@
         background: -webkit-linear-gradient(124deg, $red-gradient-top, $red-gradient-bottom);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
 
-        & svg {
+    .sig-general__chevron-left {
+        svg {
             fill : $red-gradient-bottom
         }
     }
