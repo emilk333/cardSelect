@@ -15,6 +15,10 @@
     &__logo {
         height: auto;
         width: 13rem;
+
+        svg {
+            fill : $blue-black;
+        }
     }
 
     &__nav-item-container {

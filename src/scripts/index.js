@@ -6,14 +6,19 @@ if (process.env.NODE_ENV === 'development') {
 
 let sliderButtonToggleState = false
 
+function applyGlobalTheme(styleId) {
+	const themeStyleClass = `${styleId}`
+	const themeContainerElement = document.querySelector("#theme-container")
+	themeContainerElement.className = ""
+	themeContainerElement.classList.add(themeStyleClass)
+}
+
 function applyThemeAccordingToCardTarget(event, cardElements) {
 	const classToApply = 'sig-card--active'
 	const elemToApplyClass = event.currentTarget
 	cardElements.forEach(card => card.classList.remove(classToApply))
 	elemToApplyClass.classList.add(classToApply)
-	
-	//Also write some code which allows for ONE scss var to change, which then transforms
-	//everywhere 
+	applyGlobalTheme(event.currentTarget.id)
 }
 
 function toggleSliderButtonTextColor(type) {
@@ -44,7 +49,6 @@ function toggleBillingOptions(sliderButtonElement) {
 		toggleSliderButtonTextColor('annually')
 	}
 }
-
 
 function run() {
 	const cardElements = document.querySelectorAll(".sig-card")

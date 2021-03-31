@@ -14,7 +14,7 @@
         font-size: 1.4rem;
         color: $plain-white;
         font-family: 'Futura';
-        border: 1px solid red; //change 
+        border: 1px solid $blue-black;
         background-color: $plain-white; 
         border-radius: 0.5rem;
         height: 4rem;  
@@ -47,7 +47,7 @@
         border-radius: 0.4rem;
         height: 100%;
         width: 50%;
-        background-color: red;
+        background-color: $blue-black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,12 +66,12 @@
         position: absolute;
         top: 1rem;
         right: 5rem;
-        color: red;
+        color: $blue-black;
     }
 
     &__to-payment {
         min-width: 18rem;
-        color: red;
+        color: $blue-black;
         display: flex;
         align-items: center;
         justify-content: center;

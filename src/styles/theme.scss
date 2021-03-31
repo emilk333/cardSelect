@@ -1,0 +1,109 @@
+
+
+.basic-option {
+    .sig-main-container__title {
+        color: transparent;
+        background: -webkit-linear-gradient(124deg, $blue-gradient-top, $blue-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.1;
+    }
+
+    .sig-navigation__nav-item a {
+        background: -webkit-linear-gradient(124deg, $blue-gradient-top, $blue-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        & svg {
+            fill : $blue-gradient-bottom
+        }
+    }
+
+    .sig-navigation__logo svg {
+        fill : $blue-gradient-bottom
+    }
+
+    .sig-options__to-payment {
+        color: $blue-gradient-bottom
+    }
+
+    .sig-options__button {
+        border-color: $blue-gradient-bottom
+    }
+
+    .sig-options__slider-front {
+        background: -webkit-linear-gradient(124deg, $blue-gradient-bottom, $blue-gradient-top);
+    }
+}
+
+.team-option {
+    .sig-main-container__title {
+        color: transparent;
+        background: -webkit-linear-gradient(124deg, $purple-gradient-top, $purple-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.1;
+    }   
+
+    .sig-navigation__nav-item a {
+        background: -webkit-linear-gradient(124deg, $purple-gradient-top, $purple-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        & svg {
+            fill : $purple-gradient-bottom
+        }
+    }
+
+    .sig-navigation__logo svg {
+        fill : $purple-gradient-bottom
+    }
+
+    .sig-options__to-payment {
+        color: $purple-gradient-bottom
+    }
+
+    .sig-options__button {
+        border-color: $purple-gradient-bottom
+    }
+
+    .sig-options__slider-front {
+        background: -webkit-linear-gradient(124deg, $purple-gradient-bottom, $purple-gradient-top);
+    }
+}
+
+.tribe-option {
+    .sig-main-container__title {
+        color: transparent;
+        background: -webkit-linear-gradient(124deg, $red-gradient-top, $red-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0.1;
+    }
+    
+    .sig-navigation__nav-item a {
+        background: -webkit-linear-gradient(124deg, $red-gradient-top, $red-gradient-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        & svg {
+            fill : $red-gradient-bottom
+        }
+    }
+
+    .sig-navigation__logo svg {
+        fill : $red-gradient-bottom
+    }
+
+    .sig-options__to-payment {
+        color: $red-gradient-bottom
+    }
+
+    .sig-options__button {
+        border-color: $red-gradient-bottom
+    }
+
+    .sig-options__slider-front {
+        background: -webkit-linear-gradient(124deg, $red-gradient-bottom, $red-gradient-top);
+    }
+}
