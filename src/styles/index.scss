@@ -45,6 +45,8 @@ html {
 	&__card-container {
 		display: flex;
 		gap: 6rem;
+		align-items: center;
+		height: 40rem;
 	}
 
 	&__card-wrapper {

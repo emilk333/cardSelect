@@ -30,9 +30,17 @@
     &__slider-button {
         position: relative;
         width: 30rem;
+
+        &--right {
+            .sig-options__slider-front {
+                right: 0;
+                left: auto
+            }
+        }
     }
 
     &__slider-front {
+        //transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         top: 0;
         left: 0;
         position: absolute;
@@ -43,6 +51,22 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    &__slider-text-monthly {
+        display: inline;
+        position: absolute;
+        left: 5rem;
+        top: 1rem;
+        color: $plain-white;
+    }
+
+    &__slider-text-annually {
+        display: inline;
+        position: absolute;
+        top: 1rem;
+        right: 5rem;
+        color: red;
     }
 
     &__to-payment {

@@ -2,7 +2,6 @@
 .sig-card-basic, .sig-card-team, .sig-card-tribe {
     position: relative;
     border-radius: 1rem;
-    padding: 3.5rem;
     background: linear-gradient(140deg, $plain-white, $greyish-white);
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 10px 100px -20px, rgba(0, 0, 0, 0.15) 0px 30px 60px -40px;
 }
@@ -38,8 +37,21 @@
 
     &--active {
 
-        .sig-card__checkmark--filled {
+        .sig-card__illustration-container, .sig-card__price-flag,
+        .sig-card__background-dots, .sig-card__checkmark--filled {
             opacity: 1;
+        }
+
+        .sig-card__bullit-container {
+            margin-top: 6rem;
+
+            p {
+                color: $plain-white;
+            }
+        }
+
+        .sig-card__label, .sig-card__price-label, .sig-card__price {
+            color: $plain-white;
         }
 
         .sig-card-basic {
@@ -62,6 +74,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+    }
+
+    &__wrapper {
+        overflow: hidden;
+        position: relative;
+        padding: 3.5rem;
+        border-radius: 1rem;
     }
 
     &__level {
@@ -141,6 +160,7 @@
     }
 
     &__price {
+        position: relative;
         font-size: 2.2rem;
         font-weight: bold;
         font-family: 'Menlo';
@@ -154,5 +174,51 @@
         font-weight: 500;
         opacity: 0.5;
         margin-left: -0.7rem;
+    }
+
+    &__price-flag {
+        opacity: 0;
+        position: absolute;
+        top: -2.8rem;
+        right: 0.7rem;
+    }
+
+    &__background-dots {
+        //transition: opacity 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    &__illustration-container {
+        opacity: 0;
+        position: absolute;
+
+        &--single-girl {
+            top: -6.6rem;
+            right: 5rem;
+        }
+
+        &--single-boy {
+            top: -6.6rem;
+            right: 14rem;
+        }
+
+        &--single-baby {
+            top: -3.9rem;
+            right: 11rem;
+        }
+
+        &--single-teacher {
+            left: 12.1rem;
+            top: 4.8rem;
+            z-index: 2;
+        }
+
+        &--bottom-boy {
+            bottom: -2.6rem;
+            left: 3rem;
+        }
     }
 }
