@@ -1,13 +1,6 @@
 
 
 .basic-option {
-    .sig-main-container__title {
-        color: transparent;
-        background: -webkit-linear-gradient(124deg, $blue-gradient-top, $blue-gradient-bottom);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0.1;
-    }
 
     .sig-navigation__nav-item a {
         background: -webkit-linear-gradient(124deg, $blue-gradient-top, $blue-gradient-bottom);
@@ -30,22 +23,21 @@
     }
 
     .sig-options__button {
-        border-color: $blue-gradient-bottom
+        border-color: $blue-gradient-top
     }
 
     .sig-options__slider-front {
         background: -webkit-linear-gradient(124deg, $blue-gradient-bottom, $blue-gradient-top);
     }
+
+    .sig-options__slider-text-color, .sig-options__slider-text-annually  {
+        p {
+            color: $blue-gradient-bottom
+        }
+    }
 }
 
 .team-option {
-    .sig-main-container__title {
-        color: transparent;
-        background: -webkit-linear-gradient(124deg, $purple-gradient-top, $purple-gradient-bottom);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0.1;
-    }   
 
     .sig-navigation__nav-item a {
         background: -webkit-linear-gradient(124deg, $purple-gradient-top, $purple-gradient-bottom);
@@ -74,16 +66,15 @@
     .sig-options__slider-front {
         background: -webkit-linear-gradient(124deg, $purple-gradient-bottom, $purple-gradient-top);
     }
+
+    .sig-options__slider-text-color, .sig-options__slider-text-annually  {
+        p {
+            color: $purple-gradient-bottom
+        }
+    }
 }
 
 .tribe-option {
-    .sig-main-container__title {
-        color: transparent;
-        background: -webkit-linear-gradient(124deg, $red-gradient-top, $red-gradient-bottom);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0.1;
-    }
     
     .sig-navigation__nav-item a {
         background: -webkit-linear-gradient(124deg, $red-gradient-top, $red-gradient-bottom);
@@ -111,5 +102,11 @@
 
     .sig-options__slider-front {
         background: -webkit-linear-gradient(124deg, $red-gradient-bottom, $red-gradient-top);
+    }
+
+    .sig-options__slider-text-color, .sig-options__slider-text-annually {
+        p {
+            color: $red-gradient-bottom
+        }
     }
 }

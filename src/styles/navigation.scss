@@ -1,54 +1,59 @@
 
 .sig-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 8rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 128rem;
-    width: 100%;
-    margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 8rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	max-width: 128rem;
+	width: 100%;
+	margin: 0 auto;
 
 
-    &__logo {
-        height: auto;
-        width: 13rem;
+	&__logo {
+		height: auto;
+		width: 13rem;
 
-        @media screen and (max-width: '800px') {
-            padding-left: 2rem;
-        }
+		@media screen and (max-width: '800px') {
+			padding-left: 2rem;
+		}
 
-        svg {
-            fill : $blue-black;
-        }
-    }
+		svg {
+			fill : $blue-black;
+		}
+	}
 
-    &__nav-item-container {
-        display: flex;
+	&__nav-item-container {
+		display: flex;
 
-        @media screen and (max-width: '800px') {
-            display: none;
-        }
-    }
+		@media screen and (max-width: '800px') {
+			display: none;
+		}
+	}
 
-    &__nav-item {
-        font-family: 'Futura';
-        font-size: 1.4rem;
-        margin: 0 5rem;
-        font-weight: bold;
+	&__nav-item {
+		font-family: 'Futura';
+		font-size: 1.4rem;
+		margin: 0 5rem;
+		font-weight: bold;
 
-        a {
-            display: flex;
-            color: $blue-black;
-            text-decoration: none;
+		&:hover {
+			transition: opacity 0.2s ease-in-out;
+			opacity: 0.5;
+		}
 
-            .sig-general__chevron-left {
-                margin-top: 0.3rem;
-                margin-left: 1.5rem;
-            }
-        }
-    }
+		a {
+			display: flex;
+			color: $blue-black;
+			text-decoration: none;
+
+			.sig-general__chevron-left {
+				margin-top: 0.3rem;
+				margin-left: 1.5rem;
+			}
+		}
+	}
 }
